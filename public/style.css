@@ -1,0 +1,200 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*{
+    font-family: cursive;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+:root{
+    --cor-branco: rgb(255, 255, 255);
+    --cor-preto: rgb(0, 0, 0);
+    --cor-verde: rgb(60, 135, 41);
+    --cor-vermelho: rgb(255, 0, 0);
+    --cor-vermelho-light: rgb(204, 153, 153);
+    --cor-azul: rgb(60, 145, 214);
+    --cor-azul-escuro: rgb(135, 206, 250);
+    --cor-cinza: rgb(98, 98, 98);
+    --cor-amarelo: rgb(255, 189, 89);
+    --cor-laranja: rgb(240,173,78);
+}
+
+
+body{
+    background: var(--cor-branco);
+}
+
+.header-home{
+    display: flex;
+    background: var(--cor-amarelo);
+    width: 100%;
+ 
+}
+
+.img-logo img{
+    max-width: 100%;
+    width: 10rem;
+}
+
+.container{
+    width: 100%;
+}
+
+.main-menu{
+    width: 100%;
+}
+
+.main-menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-menu ul li a{
+    display: flex;
+    padding: 3rem 5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-preto);
+    transition: all 300ms ease-in-out;
+}
+
+.main-menu ul li a:hover{
+    background: var(--cor-azul);
+    margin-top: 10px;
+}
+
+/* Estilo do formulario de cadastro */
+
+.content-login-register{
+    display: flex;
+    padding: 3rem 0;
+}
+
+.content-form-login {
+    border-right: 0.5rem solid var(--cor-azul);
+    padding: 3rem 0;
+}
+
+.content-form-cadastro, .content-form-login{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-form-cadastro h1{
+    padding: 0.5rem 0;
+}
+
+.content-form-login h1{
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.content-form-cadastro form{
+    padding: 1rem 4rem 3rem 4rem;
+}
+
+.content-form-login form{
+    padding: 5rem 4rem;
+}
+
+.content-form-cadastro form, .content-form-login form{
+    width: 50%; 
+    background: var(--cor-amarelo);
+    /* height: 700px; */
+    border-radius: 4rem;
+}
+
+.content-form-login form .icon-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-form-login form .icon-login i{
+    font-size: 10rem;
+    border: 0.5rem solid;
+    border-radius: 50%;
+}
+
+.content-form-cadastro form div.input, .content-form-login form div.input{
+    padding: 0 0 1rem 0;
+}
+
+.content-form-cadastro form div.input input, 
+.content-form-login form div.input input{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    background: rgb(252, 234, 210);
+}
+
+.content-form-cadastro form .content-btn button, .content-form-login form .content-btn button{
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: var(--cor-azul);
+    border: 0.1rem solid var(--cor-branco);
+    color: var(--cor-branco);
+    padding: 0.5rem 0;
+    border-radius: 2rem;
+    transition: background 300ms ease-in-out;
+}
+
+.content-form-cadastro form .content-btn button:hover, 
+.content-form-login form .content-btn button:hover{
+    background: var(--cor-azul-escuro);
+}
+
+.content-form-cadastro form .form-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content-form-cadastro form .form-logo img{
+    width: 200px;
+}
+
+/****************************
+estilo footer
+***************************/
+.content-footer{
+    margin-top: 300px;
+    height: 150px;
+    background-color: var(--cor-amarelo);
+}
+
+.title-quem-somos{
+    padding-top: 50px;
+    padding-left: 2%;
+}
+.desc-quem-somos{
+    padding-left: 2%;
+    padding-bottom: 30px;
+}
+.avatar {
+    margin: 0rem 5rem 0rem;
+}
+.tudoquemsomos {
+    display: flex;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('components/head') %>
+<body>
+    <%- include('components/header')  %>
+    <main>
+        <div class="content-login-register">
+            <div class="content-form-login">
+                  <form action="/loginRegister/login" method="post">
+                    <div class="icon-login">
+                      <i class='bx bxs-user'></i>
+                    </div>
+                      <h1>Login</h1>
+                        <div class="input-email input">
+                            <label for="user-email"></label>
+                            <input type="text" name="userEmail" class="user-email" placeholder="Digite seu email" id="user-email">
+                        </div>
+                        <div class="input-password input" >
+                            <label for="user-password"></label>
+                            <input type="text" name="userPassword" class="user-password" placeholder="Digite uma Senha" id="user-password">
+                        </div>
+                        
+                        <div class="content-btn">
+                            <button>Login</button>
+                        </div>
+                    </form>
+            </div>
+            <div class="content-form-cadastro">
+                  <form action="/loginRegister/register" method="post">
+                    <div class="form-logo">
+                      <img src="/img/logo.png" alt="">
+                    </div>
+                      <h1>Cadastro * </h1>
+                      <div class="input-name input">
+                        <label for="user-name"></label>
+                        <input
+                          type="text"
+                          name="user_name"
+                          class="user-name"
+                          placeholder="Nome completo"
+                          id="user-name"
+                        />
+                        <% if(msg.msgNameError) { %>
+                        <div class="msgError"><%= msg.msgNameError %></div>
+                        <% } %>
+                      </div>
+                      <div class="input-email input">
+                        <label for="user-email"></label>
+                        <input
+                          type="text"
+                          name="user_email"
+                          class="user-email"
+                          placeholder="Digite seu email"
+                          id="user-email"
+                        />
+                        <% if(msg.msgEmailError) { %>
+                        <div class="msgError"><%= msg.msgEmailError %></div>
+                        <% } %>
+                      </div>
+                      <div class="input-password input">
+                        <label for="user-password"></label>
+                        <input
+                          type="text"
+                          name="user_password"
+                          class="user-password"
+                          placeholder="Digite uma Senha"
+                          id="user-password"
+                        />
+                        <% if(msg.msgPassError || msg.passwordError) { %>
+                        <div class="msgError">
+                          <%= msg.msgPassError || msg.passwordError %>
+                        </div>
+                        <% } %>
+                      </div>
+                      <div class="input-confirm-password input">
+                        <label for="user-confirm-password"></label>
+                        <input
+                          type="text"
+                          name="userConfirmPassword"
+                          class="user-confirm-password"
+                          placeholder="Confirmar a Senha"
+                          id="user-confirm-password"
+                        />
+                        <%  if(msg.msgPassError) { %>
+                        <div class="msgError"><%= msg.msgPassError %></div>
+                        <% } %>
+                      </div>
+                      <div class="content-btn">
+                        <button>Cadastro</button>
+                      </div>
+                      <% if(msg.msgFieldsEmpty) { %>
+                      <div class="msgError"><%= msg.msgFieldsEmpty %></div>
+                      <% } %>
+                      <% if(msg.msgSuccess) { %>
+                      <div class="msgError"><%= msg.msgSuccess %></div>
+                      <% } %>
+                    </form>
+                
+                
+              </div>
+        </div>
+       
+    </main>
+    <%- include('components/footer') %>
+</body>
+</html>
